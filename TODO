@@ -1,0 +1,5 @@
+* Get get rid of storing state in node.currentMessage.
+* Improve setting box messages
+* Update screenshot
+
+* Unit tests??
