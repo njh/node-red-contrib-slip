@@ -1,6 +1,6 @@
 {
     "name"         : "node-red-contrib-slip",
-    "version"      : "1.0.0",
+    "version"      : "1.0.1",
     "description"  : "SLIP decoding and encoding for Node-RED",
     "homepage"     : "http://github.com/njh/node-red-contrib-slip",
     "license"      : "Apache-2.0",
