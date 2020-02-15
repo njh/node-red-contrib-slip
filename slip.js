@@ -25,7 +25,7 @@ module.exports = function(RED) {
 
         node.decoder = new slip.Decoder({
             onMessage: function(decoded) {
-                var msg = {payload: new Buffer(decoded)};
+                var msg = Object.assign(this.lastMsg, {payload: new Buffer(decoded)});
                 node.send(msg);
             },
             onError: function(msgBuffer, errorMsg) {
@@ -40,6 +40,7 @@ module.exports = function(RED) {
                 );
                 node.send(msg);
             } else if (node.mode == "decode") {
+                node.decoder.lastMsg = msg;
                 node.decoder.decode(
                     msg.payload
                 );
